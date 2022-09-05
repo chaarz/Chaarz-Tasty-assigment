@@ -414,6 +414,9 @@ h4{
         border-right: 1px solid #F8F8F8;
     }
 
+    .border li:last-child a {
+        border-right: none;
+    }
     .contact ul{
         width: 67%;
         margin: 0 auto;
