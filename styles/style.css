@@ -116,12 +116,70 @@ h1{
     font-weight: 100;
 }
 
+/* Hide hamburger for desktop version */
+    #navMenu label,
+    #hamburger {
+        display: none;
+    }
+/* Hide logo that was added for mobile version menu*/
+    #logo{
+        display: none;
+    }
+
 /* mobile devices */
 @media (max-width: 420px) {
     header {
         height: 70vh;
     }
 
+    h1{
+        margin-top: 50%;
+    }
+
+    /* Display top left logo added */
+    #logo{
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: -180px;
+    }
+    /* Vertical nav */
+    #menuItems a{
+        display: block;
+        width: 100%;
+        border-top: 1px solid #232323;
+    }
+    /* Vertical nav position */
+    #menuItems{
+        position: absolute;
+        top: 35px;
+        left: -210px;
+    }
+    /* show hamburger icon */
+    #navMenu {
+        display: inline-block;
+        justify-content: space-between;
+        position: relative;
+    }
+    /* "Hamburger" styles */
+    #navMenu label{
+        display: inline-block;
+        color: #232323;
+        font-size: 3rem;
+        padding: 10px;
+        position: absolute;
+        top: -5px;
+        right: -200px;
+        cursor: pointer;
+    }
+
+    /* toggle show/hide menu */
+    #menuItems{
+        display: none;
+    }
+    #navMenu input:checked ~ #menuItems {display:block;}
+
+    #navMenu input:checked ~ #menuItems li:first-child {display:none;}
 }
 
 /* ********************************* */
@@ -140,6 +198,7 @@ h2{
 
 button{
     border: none;
+    /* accent color used fo button background as per style guide */
     background-color: #fdc800;
     font-family: 'Cabin', sans-serif;
     font-weight: 600;
@@ -395,7 +454,7 @@ h4{
     .form {
         order: -1;
     }
-    .posts{
+    .blog{
         display: none;
     }
 

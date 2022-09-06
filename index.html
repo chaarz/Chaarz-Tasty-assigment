@@ -16,17 +16,24 @@
     <header id="home">
         <div class="wrapper">
             <nav>
-                <ul>
-                    <li><a href="#"><span>Tasty</span></a></li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <div id="navMenu">
+                <!-- creating hamburger menu for mobile version: create an invisible checkbox with unicode character &#9776;'Trigram for Heaven' or '3 lines hamburger icon' as label  -->
+                    <div id="logo"><a href="#"><span>Tasty</span></a></div>
+
+                    <label for="hamburger">&#9776;</label>
+                    <input type="checkbox" id="hamburger">
+
+                    <ul id="menuItems">
+                        <li><a href="#"><span>Tasty</span></a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
 
             <h1>Welcome to <br> <span class="logo">Tasty...</span></h1>
-            <!-- <div class="logo">Tasty...</div> -->
         </div>
     </header>
 
@@ -69,7 +76,7 @@
         <section class="galleryContent">
 
             <div class="flexContainer">
-                <div class="textContainer">
+                <div class="textContainer" id="cookingTips">
                     <h3>Cooking Tips</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, voluptates nisi doloremque earum optio quidem culpa blanditiis?</p>
                     <button>Read More</button>
@@ -78,18 +85,14 @@
                 <div class="imageContainer">
                     <img src="./tasty-assets/asset-5.jpg" alt="citrus fruits on a plate and tablet">
                 </div>
-            <!-- </div> -->
-
-            <!-- <div class="flexContainer tablet"> -->
                 <div class="imageContainer tablet">
                     <img src="./tasty-assets/asset-6.jpg" alt="tablet standing on kitchen counter displaying a recipe">
                 </div>
 
-                <div class="textContainer">
+                <div class="textContainer" id="recipes">
                     <h3>Popular Recipes</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa dicta nemo ducimus mollitia, eos placeat enim aspernatur?sum dolor sit, amet consectetur adipisicing.</p>
                     <button>Read More</button>
-                <!-- </div> -->
             </div>
         </section>
 
@@ -109,7 +112,7 @@
     </main>
     <footer class="footer">
         <div class="wrapper flexContainer">
-            <div class="footerNav contact">
+            <div class="footerNav contact" id="contact">
                 <h4>Contact</h4>
                 <ul>
                     <li>info@email.com,</li>
@@ -124,10 +127,10 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about" title="Go to our About section">About</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footerNav posts">
+            <div class="footerNav blog" id="blog">
                 <h4>Recent posts</h4>
                 <ul>
                     <li><a href="#">Lemon Pound Cake</a></li>
@@ -150,3 +153,4 @@
 
 </body>
 </html>
+
